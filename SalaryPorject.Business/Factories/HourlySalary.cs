@@ -9,6 +9,6 @@
             Salary = salary;
         }
 
-        public double GetAnnualSalary() => Salary * 12;
+        public double GetAnnualSalary() => 120 * Salary* 12;
     }
 }
