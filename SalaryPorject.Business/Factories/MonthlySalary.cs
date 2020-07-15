@@ -1,6 +1,6 @@
 ﻿namespace SalaryPorject.Business.Factories
 {
-    public class MonthlySalary: ISalaryFactory
+    public class MonthlySalary : ISalaryFactory
     {
         public double Salary { set; get; }
 

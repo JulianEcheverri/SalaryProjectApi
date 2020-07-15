@@ -10,8 +10,6 @@
         public string RoleDescription { get; set; }
         public double HourlySalary { get; set; }
         public double MonthlySalary { get; set; }
-
-        // Almacena el campo calculado segun SalaryFactory
         public double AnnualSalary { get; set; }
     }
 }

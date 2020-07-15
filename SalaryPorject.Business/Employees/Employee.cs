@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SalaryPorject.Business.Employees
 {
-    public class Employee: IEmployee
+    public class Employee : IEmployee
     {
         private readonly IEmployeeClient _employeeClient;
 
@@ -18,7 +18,7 @@ namespace SalaryPorject.Business.Employees
             _employeeClient = employeeClient;
         }
 
-        public async Task<List<EmployeeModel>> GetEmployees<T>() 
+        public async Task<List<EmployeeModel>> GetEmployees<T>()
         {
             return await GetAllEmployees<T>();
         }
@@ -26,7 +26,7 @@ namespace SalaryPorject.Business.Employees
         public async Task<EmployeeModel> GetEmployee<T>(int id)
         {
             List<EmployeeModel> employees = await GetAllEmployees<T>();
-            return employees.FirstOrDefault(x=> x.Id == id);
+            return employees.FirstOrDefault(x => x.Id == id);
         }
 
         public async Task<List<EmployeeModel>> GetAllEmployees<T>()

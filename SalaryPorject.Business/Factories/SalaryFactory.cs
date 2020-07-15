@@ -10,8 +10,10 @@ namespace SalaryPorject.Business.Factories
             {
                 case EContractType.HourlySalaryEmployee:
                     return new HourlySalary(hourlySalary);
+
                 case EContractType.MonthlySalaryEmployee:
                     return new MonthlySalary(monthlySalary);
+
                 default:
                     return null;
             }

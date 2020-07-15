@@ -1,6 +1,6 @@
 ﻿namespace SalaryPorject.Business.Factories
 {
-    public class HourlySalary: ISalaryFactory
+    public class HourlySalary : ISalaryFactory
     {
         public double Salary { set; get; }
 
@@ -9,6 +9,6 @@
             Salary = salary;
         }
 
-        public double GetAnnualSalary() => 120 * Salary* 12;
+        public double GetAnnualSalary() => 120 * Salary * 12;
     }
 }

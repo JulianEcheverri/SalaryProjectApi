@@ -23,7 +23,7 @@ namespace SalaryProject.Web.Controllers
             _employee = employee;
         }
 
-        // GET: api/EmployeesController 
+        // GET: api/EmployeesController
         [HttpGet]
         public async Task<ActionResult<IEnumerable<EmployeeModel>>> Get()
         {
