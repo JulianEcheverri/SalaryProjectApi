@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace SalaryProject.DataAccess.EmployeeClient
 {
-    // EmployeeClient se encarga de realizar la petición a la api mediante los métodos definidos en su capa de abstración IEmployeeClient
     public class EmployeeClient : IEmployeeClient
     {
         private const string BaseUrl = "http://masglobaltestapi.azurewebsites.net/api/Employees";
+
+        // Usamos inyeccion de dependencias con HttpClient para realizar la solicitud
         private readonly HttpClient _client;
 
         public EmployeeClient(HttpClient client)

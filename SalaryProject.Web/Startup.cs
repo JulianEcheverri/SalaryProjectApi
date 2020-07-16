@@ -22,20 +22,19 @@ namespace SalaryProject.Web
         {
             services.AddControllers();
 
-            // Registramos la dependencia del HttpClient referente a nuestra capa de datos EmployeeClient
             services.AddHttpClient<IEmployeeClient, EmployeeClient>();
 
-            // Registramos la dependencia del dto para el tratamiento de la información recibida en la capa de datos
+            // Registramos la dependencia del dto para luego ser usada en el controlador
             services.AddTransient<IEmployee, Employee>();
 
-            // .Net va a bloquear peticiones que esten fuera de su dominio o puerto, para ello instalamos el paquete Microsoft.AspNetCore.Cors y lo añadimos en el startup
+            // Añadimos Cors al servicio
             services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            // Añadimos los origenes permitidos de dominios externos para el proyecto de angular
+            // Permitimos acceso al proyecto
             app.UseCors(options => options.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader());
 
             if (env.IsDevelopment())

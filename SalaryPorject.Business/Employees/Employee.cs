@@ -18,10 +18,7 @@ namespace SalaryPorject.Business.Employees
             _employeeClient = employeeClient;
         }
 
-        public async Task<List<EmployeeModel>> GetEmployees<T>()
-        {
-            return await GetAllEmployees<T>();
-        }
+        public async Task<List<EmployeeModel>> GetEmployees<T>() => await GetAllEmployees<T>();
 
         public async Task<EmployeeModel> GetEmployee<T>(int id)
         {
