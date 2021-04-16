@@ -10,7 +10,6 @@ namespace SalaryProject.DataAccess.EmployeeClient
     {
         private const string BaseUrl = "http://masglobaltestapi.azurewebsites.net/api/Employees";
 
-        // Usamos inyeccion de dependencias con HttpClient para realizar la solicitud
         private readonly HttpClient _client;
 
         public EmployeeClient(HttpClient client)
